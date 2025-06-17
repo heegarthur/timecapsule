@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="body" id="body">
+        <h1>Time Capsule</h1><br>
+        <textarea class="textarea_message" id="capsuleInput" placeholder="write your message"></textarea><br>
+        <button class="button" id="saveBtn">send to future</button><br>
+        <p id="link"></p><br>
+        <script src="index.js"></script>
+        <button class="coffee" onclick="opencoffee('https://buymeacoffee.com/ivocreator')">buy me a coffee</button>
+    </div>
+    <button class="capsule_max" onclick="max_body()">▢</button>
+    <button class="capsule_min" onclick="min_body()">–</button>
+    <button class="capsule_close" onclick="close_body()">✕</button>
+
+
+</body>
+
+</html>
