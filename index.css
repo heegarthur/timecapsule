@@ -207,3 +207,31 @@ div {
     color: #ffffff;
     background: linear-gradient(90deg, #2975e9, #ffe605);
 }
+
+
+.postI {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #0055cc;
+  text-decoration: none;
+  background-color: #e0eaff;
+  padding: 0.5em;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.postI:hover {
+  background-color: #cce0ff;
+}
+.links{
+    background: #e2d300;
+    color: #000000;
+    transition:  ease-in-out 1s;
+}
+.links:hover{
+    background: #ddc227;
+    transform: scale(1.1);
+}
