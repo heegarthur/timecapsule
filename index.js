@@ -6,6 +6,9 @@ const encoded = params.get('msg');
 
 
 
+
+
+
 if (encoded) {
     try {
         const decoded = decodeURIComponent(atob(encoded));
@@ -15,6 +18,13 @@ if (encoded) {
     } catch {
         link.textContent = 'invalid link';
     }
+}
+
+function voegItemToe(nieuwItem) {
+    const key = "linkkk";
+    let items = JSON.parse(localStorage.getItem(key)) || [];
+    items.push(nieuwItem);
+    localStorage.setItem(key, JSON.stringify(items));
 }
 
 
@@ -86,12 +96,16 @@ function betteralert_copierr(err) {
 
 function copylink() {
     const link = document.getElementById('clv').href;
+    voegItemToe(link);
     navigator.clipboard.writeText(link)
         .then(() => betteralert_copied())
         .catch(err => betteralert_copierr(err));
 }
 
-function opencoffee(text){
+function opencoffee(text) {
     window.open(text);
     window.close();
 }
+
+
+
